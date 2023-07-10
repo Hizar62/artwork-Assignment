@@ -32,7 +32,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.Box
 import androidx.compose.material.Surface
+import androidx.compose.material3.Card
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 
 class MainActivity : ComponentActivity() {
@@ -45,7 +48,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    ArtWork()
+                    ArtSpace()
                 }
             }
         }
@@ -53,43 +56,38 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun ArtWork( modifier: Modifier = Modifier) {
-    Column(modifier = Modifier.fillMaxSize()) {
+fun ArtWork_image(imageResource:Int, textResource:String, titleResource:String ) {
+    Column() {
+        Image(painter = painterResource(id = imageResource), contentDescription = null,
+                modifier = Modifier.padding(20.dp))
 
-//        Image
 
+        Card() {
+            Column {
+                Text(text =titleResource, fontSize = 32.sp, fontWeight = FontWeight.Medium)
+                Text(text =textResource, fontSize = 16.sp, fontWeight = FontWeight.Bold)
 
-            Image(painter = painterResource(id = R.drawable.milky), contentDescription = "Milky way",
-            modifier = Modifier.fillMaxSize().fillMaxWidth().padding(bottom=200.dp))
-
-//        Description
-        Column(modifier = Modifier.fillMaxWidth(),
-            horizontalAlignment = Alignment.CenterHorizontally) {
-            Text(text = "ArtWork Title")
-            Text(text = "ArtWork Artist (Year)")
-        }
-
-//        Buttons
-        Row(modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.Center
-            ) {
-            Button(onClick = { /*TODO*/ }, modifier = Modifier.padding(8.dp).clip(shape = RoundedCornerShape(8.dp))) {
-                Text(text = "Previous")
-            }
-            Button(onClick = { /*TODO*/ }, modifier = Modifier.padding(8.dp).clip(shape = RoundedCornerShape(8.dp))) {
-                Text(text = "  Next  ")
             }
         }
-
 
 
     }
 }
 
+@Composable
+fun ArtSpace(){
+
+
+    
+}
+
+
+
+
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     Assigment3Theme {
-        ArtWork()
+        ArtSpace()
     }
 }
