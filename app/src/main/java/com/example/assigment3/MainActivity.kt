@@ -21,11 +21,19 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.assigment3.ui.theme.Assigment3Theme
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.Box
+import androidx.compose.material.Surface
+import androidx.compose.ui.unit.dp
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,8 +58,9 @@ fun ArtWork( modifier: Modifier = Modifier) {
 
 //        Image
 
+
             Image(painter = painterResource(id = R.drawable.milky), contentDescription = "Milky way",
-            modifier = Modifier.fillMaxWidth())
+            modifier = Modifier.fillMaxSize().fillMaxWidth().padding(bottom=200.dp))
 
 //        Description
         Column(modifier = Modifier.fillMaxWidth(),
