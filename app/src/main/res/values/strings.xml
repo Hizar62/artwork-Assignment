@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Assigment3</string>
+    <string name="italy_street">Italy Street</string>
+    <string name="sun_set">SunSet</string>
+    <string name="mily_wa">Milky Way Galaxy</string>
+    <string name="mountain">Mountains</string>
+    <string name="jureslam">Street</string>
+
+    <string name="italy_dec">Rome City</string>
+    <string name="sunset_dec">sunset and palm trees</string>
+    <string name="milywa_dec">Galaxy taken by NASA</string>
+    <string name="mountain_dec">Beautiful Mountains</string>
+    <string name="jureslam_dec">Jerusalem Stairs</string>
+
+
+
+
+
+
 </resources>
